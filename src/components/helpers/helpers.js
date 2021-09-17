@@ -7,11 +7,11 @@ export function showNotification(setter) {
 
 
 
-  export function checkWin(correct, wrong, word) {
+  export function checkWin(correct, wrong, selectedWords) {
     let status = 'win';
   
     // Check for win
-    word.split('').forEach(letter => {
+    selectedWords.split('').forEach(letter => {
       if(!correct.includes(letter)){
         status = '';
       }

@@ -2,17 +2,17 @@ import React, { useEffect } from 'react';
 import {checkWin} from "./helpers/helpers";
 
 
-const Popup = ({ correctLetters, wrongLetters, selectedWord, setPlayable, playAgain }) => {
+const Popup = ({ correctLetters, wrongLetters, selectedWords, setPlayable, playAgain }) => {
     let finalMessage ="";
     let finalMessageRevealWord ="";
     let playable = true;
 
-    if( checkWin(correctLetters, wrongLetters, selectedWord) === "win" ) {
+    if( checkWin(correctLetters, wrongLetters, selectedWords) === "win" ) {
         finalMessage = "Congrulations! You won!";
         playable = false;
-    } else if ( checkWin(correctLetters, wrongLetters, selectedWord) === "lose" ){
+    } else if ( checkWin(correctLetters, wrongLetters, selectedWords) === "lose" ){
         finalMessage = "Unfortunately you lost.";
-        finalMessageRevealWord = `...the word was: ${selectedWord}`;
+        finalMessageRevealWord = `...the word was: ${selectedWords}`;
         playable = false;
     
 }

@@ -1,17 +1,13 @@
 import React from "react";
 
-function Word({ selectedWord, correctLetters }) {
-    return(
-        <div className="word">
-             {selectedWord.split('').map((letter, i) => {
-        return(
-          <span className="letter" key={i}>
-            {correctLetters.includes(letter) ? letter : ''}
-          </span>
-        )
-             })}
-        </div>
-    
-    )}
+function Word({ selectedWords, correctLetters }) {
+  console.log(selectedWords);
+  const allLetters = selectedWords.split("").map((letter, i) => (
+    <span className="letter" key={i}>
+      {correctLetters.includes(letter) ? letter : ""}
+    </span>
+  ));
+  return <div>{allLetters}</div>;
+}
 
 export default Word;
