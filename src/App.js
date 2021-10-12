@@ -24,7 +24,7 @@ function App() {
     axios.get('https://random-word-api.herokuapp.com//word?number=1')
     .then(response => setSelectedWords(response.data.toString()))
     }
-
+    
     useEffect(() => {
       getWords()
     }, [])
